@@ -1,10 +1,19 @@
 import Image from "next/image";
 import Banner from "./components/Banner";
+import BookList from "./components/BookList";
 
-export default function Home() {
+export default async function Home() {
+  const response = await fetch(`${process.env.BACKEND_URL}/books/list`);
+
+  if(!response.ok){
+    throw new Error("An error occurred while fetching the data");
+  }
+  const books = await response.json();
+  console.log("books",books)
   return (
-    <div>
+    <>
       <Banner/>
-    </div>
+      <BookList books={books}/>
+    </>
   );
 }
