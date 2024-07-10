@@ -3,7 +3,15 @@ runtime: nodejs18
 
 # service: my-next-app
 
+env_variables:
+  NODE_ENV: 'production'
+  BACKEND_URL: ${BACKEND_URL}
+
 handlers:
+  - url: /_next/static
+    static_dir: .next/static
+    secure: always
+
   - url: /.*
     secure: always
     script: auto
