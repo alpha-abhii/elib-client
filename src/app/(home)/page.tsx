@@ -4,6 +4,8 @@ import BookList from "./components/BookList";
 import { Suspense } from "react";
 import Loading from "@/components/Loading";
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
 
 
