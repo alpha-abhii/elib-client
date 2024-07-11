@@ -12,6 +12,12 @@ handlers:
     static_dir: .next/static
     secure: always
 
+  - url: /images/.*
+    static_dir: public/images
+    secure: always
+    http_headers:
+      Cache-Control: "no-store"
+
   - url: /.*
     secure: always
     script: auto
