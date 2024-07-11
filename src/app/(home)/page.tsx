@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Banner from "./components/Banner";
 import BookList from "./components/BookList";
 import { Suspense } from "react";
