@@ -7,7 +7,9 @@ import Loading from "@/components/Loading";
 // export const dynamic = 'force-dynamic';
 
 export default async function Home() {
+  const response = await fetch(`${process.env.BACKEND_URL}/books/list`,{ cache: 'no-store' });
 
+  console.log("BookList:: ",response);
 
   return (
     <>
