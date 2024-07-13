@@ -3,7 +3,7 @@ import React from 'react'
 import BookCard from './BookCard'
 
 const BookList = async () => {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/books/list`,{ cache: 'no-store' });
+    const response = await fetch(`${process.env.BACKEND_URL}/books/list`,{ cache: 'no-store' });
 
     // console.log("BookList:: ",response);
 

@@ -7,7 +7,7 @@ const SingleBookPage = async ({ params }: { params: { id: string } }) => {
     // console.log('params', params);
     let book: Book | null = null;
     try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/books/list/${params.id}`, {
+        const response = await fetch(`${process.env.BACKEND_URL}/books/list/${params.id}`, {
             next: {
                 revalidate: 3600,
             },
