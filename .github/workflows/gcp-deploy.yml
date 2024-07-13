@@ -25,13 +25,13 @@ jobs:
         run: npm install
         
       - name: Verify environment variables
-        run: echo $BACKEND_URL
+        run: echo $NEXT_PUBLIC_BACKEND_URL
         env:
-          BACKEND_URL: ${{ secrets.BACKEND_URL }}
+          BACKEND_URL: ${{ secrets.NEXT_PUBLIC_BACKEND_URL }}
 
       - name: Build Next Project
         env: 
-          BACKEND_URL: ${{secrets.BACKEND_URL}}
+          BACKEND_URL: ${{secrets.NEXT_PUBLIC_BACKEND_URL}}
         run: npm run build
 
       - name: Google Cloud Auth

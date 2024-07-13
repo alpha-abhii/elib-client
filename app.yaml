@@ -5,7 +5,7 @@ runtime: nodejs18
 
 env_variables:
   NODE_ENV: 'production'
-  BACKEND_URL: ${BACKEND_URL}
+  BACKEND_URL: ${NEXT_PUBLIC_BACKEND_URL}
 
 handlers:
   - url: /_next/static
